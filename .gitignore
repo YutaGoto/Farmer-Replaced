@@ -1,0 +1,7 @@
+Backup/**
+
+*.txt
+*.log
+*.vdf
+*.json
+__builtins__.py
