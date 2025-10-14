@@ -1,4 +1,5 @@
 from move_to import move_to
+from move_count import move_count
 
 def init():
     clear()
@@ -45,13 +46,7 @@ def init():
             till()
             plant(Entities.Pumpkin)
             if get_pos_y() == 11:
-                move(South)
-                move(South)
-                move(South)
-                move(South)
-                move(South)
-                move(South)
-                move(South)
+                move_count(South, 7)
             else:
                 move(North)
 
@@ -67,13 +62,7 @@ def init():
             till()
             plant(Entities.Cactus)
             if get_pos_y() == 15:
-                move(South)
-                move(South)
-                move(South)
-                move(South)
-                move(South)
-                move(South)
-                move(South)
+                move_count(South, 7)
             else:
                 move(North)
         move(East)
