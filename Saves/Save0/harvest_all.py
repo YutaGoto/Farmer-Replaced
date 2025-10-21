@@ -1,11 +1,13 @@
-ws = get_world_size()
-c = 0
+from move_to import move_to
 
-while c < ws ** 2:
-    for i in range(ws):
-        for j in range(ws):
-            if can_harvest():
-                harvest()
-            c += 1
-            move(North)
+def harvest_column():
+    for _ in range(get_world_size()):
+        if can_harvest():
+        harvest()   
+        move(North)
+
+move_to(0, 0)
+
+while True:
+    if spawn_drone(harvest_column):
         move(East)

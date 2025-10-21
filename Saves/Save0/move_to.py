@@ -1,13 +1,24 @@
 def move_to(x, y):
+
     while True:
-        if get_pos_x() == x:
+        current_x = get_pos_x()
+
+        if current_x == x:
             break
-        
-        move(East)
-    
+
+        if current_x > x:
+            move(West)
+        else:
+            move(East)
+
     while True:
-        if get_pos_y() == y:
+        current_y = get_pos_y()
+
+        if current_y == y:
             break
-        
-        move(North)
-    
+
+        if current_y > y:
+            move(South)
+        else:
+            move(North)
+            
